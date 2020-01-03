@@ -53,9 +53,9 @@ app.use(morgan('combined')) // use 'tiny' or 'combined'
 
 // App Routes - Auth
 app.get('/', (req, res) => res.send('hello world'))
-app.get('/crud', (req, res) => main.getPlantData(req, res, db))
-app.post('/crud', (req, res) => main.postPlantData(req, res, db))
-app.delete('/crud', (req, res) => main.deletePlantData(req, res, db))
+app.get('/plants', (req, res) => main.getPlantData(req, res, db))
+app.post('/plants', (req, res) => main.postPlantData(req, res, db))
+app.delete('/plants', (req, res) => main.deletePlantData(req, res, db))
 
 // App Server Connection
 app.listen(process.env.PORT || 3000, () => {
