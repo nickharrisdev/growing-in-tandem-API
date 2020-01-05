@@ -10,24 +10,24 @@ const cors = require('cors')  // allows/disallows cross-site communication
 const morgan = require('morgan') // logs requests
 
 // db Connection w/ Heroku
-// const db = require('knex')({
-//   client: 'pg',
-//   connection: {
-//     connectionString: process.env.DATABASE_URL,
-//     ssl: true,
-//   }
-// });
-
-// db Connection w/ localhost
-var db = require('knex')({
+const db = require('knex')({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : '',
-    password : '',
-    database : 'growing-api'
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
   }
 });
+
+// db Connection w/ localhost
+// var db = require('knex')({
+//   client: 'pg',
+//   connection: {
+//     host : '127.0.0.1',
+//     user : '',
+//     password : '',
+//     database : 'growing-api'
+//   }
+// });
 
 // Controllers - aka, the db queries
 const main = require('./controllers/main')
