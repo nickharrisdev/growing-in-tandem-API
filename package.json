@@ -4,7 +4,7 @@
   "description": "API for an office plants-scheduler",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
