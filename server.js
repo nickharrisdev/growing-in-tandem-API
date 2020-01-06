@@ -36,7 +36,7 @@ const main = require('./controllers/main')
 const app = express()
 
 // App Middleware
-const whitelist = ['http://localhost:3000']
+const whitelist = ['http://localhost:3000', 'https://nickharriscodes.github.io']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
